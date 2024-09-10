@@ -1,0 +1,19 @@
+replicas: 1
+
+containerName: registry
+imageName: registry
+imageTag: 2
+imagePullPolicy: Always
+
+volumes:
+  - name: registry-storage
+    emptyDir: {}
+
+volumeMounts:
+  - name: registry-storage
+    mountPath: /var/lib/registry
+
+service:
+  port: 5000
+  targetPort: 5000
+  host: 0.0.0.0

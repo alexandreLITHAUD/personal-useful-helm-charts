@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: base-docker-registry
+  labels:
+    app: base-docker-registry
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: base-docker-registry
+  template:
+    metadata:
+      labels:
+        app: base-docker-registry
+    spec:
+      containers:
+        - name: {{ .Values.containerName }}
+          image: {{ .Values.imageName }}:{{ .Values.imageTag }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          env:
+            - name: REGISTRY_HTTP_ADDR
+              value: {{ .Values.service.host }}:{{ .Values.service.port }}
+          volumeMounts: {{ .Values.volumeMounts }}
+      volumes: {{ .Values.volumes }}
