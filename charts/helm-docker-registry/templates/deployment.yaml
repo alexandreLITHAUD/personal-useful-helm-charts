@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: {{ .Release.Namespace }}
   name: base-docker-registry
   labels:
     app: base-docker-registry
@@ -22,6 +23,8 @@ spec:
             - containerPort: {{ .Values.service.port }}
           env:
             - name: REGISTRY_HTTP_ADDR
-              value: {{ .Values.service.host }}:{{ .Values.service.port }}
-          volumeMounts: {{ .Values.volumeMounts }}
-      volumes: {{ .Values.volumes }}
+              value: "{{ .Values.service.host }}:{{ .Values.service.port }}"
+          volumeMounts:
+            {{- toYaml .Values.volumeMounts | nindent 12 }}
+      volumes:
+        {{- toYaml .Values.volumes | nindent 8 }}
