@@ -1,6 +1,26 @@
 apiVersion: v1
 entries:
+  cors-proxy:
+  - apiVersion: v2
+    created: "2024-09-10T13:36:57.589430385Z"
+    description: A simple CORS proxy for Kubernetes
+    digest: 98ff72d8c7265c2b76a6daae158015c8205dee7f3529bcfb86eb6d66fd20d33d
+    name: cors-proxy
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/cors-proxy-0.1.0/cors-proxy-0.1.0.tgz
+    version: 0.1.0
   helm-docker-registry:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-10T13:36:57.773647666Z"
+    description: An Helm Chart for creating Docker Registry
+    digest: 059ccb7db5ebfe0a53600a3556518466fe4ba4f38a5396c483f82556e5a7fe9e
+    name: helm-docker-registry
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-docker-registry-0.1.2/helm-docker-registry-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-09-10T13:25:46.518045804Z"
@@ -21,4 +41,4 @@ entries:
     urls:
     - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-docker-registry-0.1.0/helm-docker-registry-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-10T13:25:46.518055162Z"
+generated: "2024-09-10T13:36:57.773678093Z"
