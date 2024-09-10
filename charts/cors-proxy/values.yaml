@@ -1,0 +1,10 @@
+# cors-proxy/values.yaml
+replicaCount: 1
+image:
+  repository: nginx
+  tag: stable
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+targetURL: http://qama-backend:65454  # Adjust this to your backend service name and port
