@@ -81,6 +81,15 @@ entries:
     version: 0.1.0
   helm-flask-elastic-apm:
   - apiVersion: v2
+    created: "2024-09-11T13:33:04.629275277Z"
+    description: An Helm Chart for creating Flask Elastic APM
+    digest: 15adb136af464f1016cdfeabe61e2b1d87b230a39e1261181dd5dada408a8a76
+    name: helm-flask-elastic-apm
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-flask-elastic-apm-0.1.2/helm-flask-elastic-apm-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2024-09-11T12:46:53.232762055Z"
     description: An Helm Chart for creating Flask Elastic APM
     digest: 0802f82c627877bcd1da98296b21312c6f11bbd1074bb300a88bf137bbcd237a
@@ -98,4 +107,4 @@ entries:
     urls:
     - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-flask-elastic-apm-0.1.0/helm-flask-elastic-apm-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-11T12:46:53.232793494Z"
+generated: "2024-09-11T13:33:04.629306645Z"
