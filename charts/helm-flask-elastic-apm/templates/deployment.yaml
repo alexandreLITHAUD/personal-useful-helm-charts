@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "flask-apm.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "flask-apm.name" . }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ include "flask-apm.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "flask-apm.name" . }}
+    spec:
+      containers:
+      - name: flask-apm
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        ports:
+        - containerPort: {{ .Values.network.port }}
+        env:
+        - name: ELASTIC_APM_SERVICE_NAME
+          value: {{ .Values.apm.service-name }}
+        - name: ELASTIC_APM_SERVER_URL
+          value: {{ .Values.apm.server-url }}

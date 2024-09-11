@@ -6,7 +6,7 @@ function cleanup() {
     exit 0
 }
 
-trap SIGINT cleanup
+trap cleanup SIGINT
 
 kubectl port-forward service/docker-registry-service 5000:5000 &
 

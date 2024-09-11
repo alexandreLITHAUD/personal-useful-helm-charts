@@ -1,0 +1,14 @@
+replicas: 1
+# nameoverride: 
+# fullnameoverride:
+
+image:
+  repository: alexandrelithaud/flask-apm
+  tag: final
+
+network:
+  port: 5000
+
+apm:
+  service-name: "flask-apm-service"
+  server-url: "http://apm-service.elk-monitoring.svc:8200"

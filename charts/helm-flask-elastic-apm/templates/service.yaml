@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "flask-apm.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "flask-apm.name" . }}
+spec:
+  selector:
+    app: {{ include "flask-apm.name" . }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.network.port }}
+  type: ClusterIP

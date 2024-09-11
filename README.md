@@ -15,6 +15,7 @@ Then you can pull the wanted chart by adding the name as a prefix.
 ## Charts Included
 - `helm-docker-registry`: A Helm chart for deploying a Docker registry.
 - `cors-proxy`: A Helm chart for deploying a reverse proxy that embedded CORS headers.
+- `helm-flask-elastic-apm`: A Helm chart for deploying a simple flask App that communicate with an Elastic APM Server.
 
 ## Contributions
 
