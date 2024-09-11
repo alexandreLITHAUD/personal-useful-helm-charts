@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   cors-proxy:
   - apiVersion: v2
+    created: "2024-09-11T12:46:52.842486237Z"
+    description: A simple CORS proxy for Kubernetes
+    digest: eb4f40338e59329eedc095ce278b503eb4a906a1c28b4bd747dc83762a4f4903
+    name: cors-proxy
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/cors-proxy-0.1.2/cors-proxy-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2024-09-11T08:34:24.845110419Z"
     description: A simple CORS proxy for Kubernetes
     digest: e00b4d1f3e73e3584f084affbf00ddfe394f1296ec81ac789d18506b9105a475
@@ -20,6 +29,16 @@ entries:
     - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/cors-proxy-0.1.0/cors-proxy-0.1.0.tgz
     version: 0.1.0
   helm-docker-registry:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-09-11T12:46:53.042246827Z"
+    description: An Helm Chart for creating Docker Registry
+    digest: f6b813312b2013fff1bf01d9fc66475d77cab5afc4b0af70fc8def2be1880822
+    name: helm-docker-registry
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-docker-registry-0.1.4/helm-docker-registry-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-09-11T08:34:25.0261847Z"
@@ -62,6 +81,15 @@ entries:
     version: 0.1.0
   helm-flask-elastic-apm:
   - apiVersion: v2
+    created: "2024-09-11T12:46:53.232762055Z"
+    description: An Helm Chart for creating Flask Elastic APM
+    digest: 0802f82c627877bcd1da98296b21312c6f11bbd1074bb300a88bf137bbcd237a
+    name: helm-flask-elastic-apm
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-flask-elastic-apm-0.1.1/helm-flask-elastic-apm-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2024-09-11T08:34:25.208662997Z"
     description: An Helm Chart for creating Flask Elastic APM
     digest: a53f08061333ec9b94dfa7e127fc609fa398bf1dc0896f455fe0df53fda555dd
@@ -70,4 +98,4 @@ entries:
     urls:
     - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-flask-elastic-apm-0.1.0/helm-flask-elastic-apm-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-11T08:34:25.208687132Z"
+generated: "2024-09-11T12:46:53.232793494Z"
