@@ -46,7 +46,7 @@ This section contains network parameters
 
 This section contains APM parameters
 
-| Name               | Description  | Value                                        |
-| ------------------ | ------------ | -------------------------------------------- |
-| `apm.service-name` | Service name | `flask-apm-service`                          |
-| `apm.server-url`   | Server URL   | `http://apm-service.elk-monitoring.svc:8200` |
+| Name              | Description  | Value                                        |
+| ----------------- | ------------ | -------------------------------------------- |
+| `apm.serviceName` | Service name | `flask-apm-service`                          |
+| `apm.serverUrl`   | Server URL   | `http://apm-service.elk-monitoring.svc:8200` |

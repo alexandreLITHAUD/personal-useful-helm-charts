@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "flask-apm.fullname" . }}
+  name: {{ include "helm-flask-elastic-apm.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ include "flask-apm.name" . }}
+    app: {{ include "helm-flask-elastic-apm.name" . }}
 spec:
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
-      app: {{ include "flask-apm.name" . }}
+      app: {{ include "helm-flask-elastic-apm.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "flask-apm.name" . }}
+        app: {{ include "helm-flask-elastic-apm.name" . }}
     spec:
       containers:
       - name: flask-apm
@@ -22,6 +22,6 @@ spec:
         - containerPort: {{ .Values.network.port }}
         env:
         - name: ELASTIC_APM_SERVICE_NAME
-          value: {{ .Values.apm.service-name }}
+          value: "{{ .Values.apm.serviceName }}"
         - name: ELASTIC_APM_SERVER_URL
-          value: {{ .Values.apm.server-url }}
+          value: "{{ .Values.apm.serverUrl }}"

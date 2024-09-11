@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "flask-apm.fullname" . }}
+  name: {{ include "helm-flask-elastic-apm.fullname" . }}
   namespace: {{ .Release.Namespace }}
   labels:
-    app: {{ include "flask-apm.name" . }}
+    app: {{ include "helm-flask-elastic-apm.name" . }}
 spec:
   selector:
-    app: {{ include "flask-apm.name" . }}
+    app: {{ include "helm-flask-elastic-apm.name" . }}
   ports:
     - protocol: TCP
       port: 80
