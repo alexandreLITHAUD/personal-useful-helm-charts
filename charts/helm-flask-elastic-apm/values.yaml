@@ -1,14 +1,40 @@
-replicas: 1
-# nameoverride: 
-# fullnameoverride:
+## @section Common parameters
+## @descriptionStart This section contains parameters common to most of the Helm Charts
+## @descriptionEnd
 
+## Number of replicas to run
+## @param replicas Number of replicas to run
+##
+replicas: 1
+
+## @section Image parameters
+## @descriptionStart This section contains image parameters and
+## the image repository and tag
+## @descriptionEnd
+
+## Image
+## @param image.repository Image repository
+## @param image.tag Image tag
 image:
   repository: alexandrelithaud/flask-apm
   tag: final
 
+## @section Network parameters
+## @descriptionStart This section contains network parameters
+## @descriptionEnd
+
+## Network
+## @param network.port Network port
 network:
   port: 5000
 
+## @section APM parameters
+## @descriptionStart This section contains APM parameters
+## @descriptionEnd
+
+## Elastic APM
+## @param apm.service-name Service name
+## @param apm.server-url Server URL
 apm:
   service-name: "flask-apm-service"
   server-url: "http://apm-service.elk-monitoring.svc:8200"

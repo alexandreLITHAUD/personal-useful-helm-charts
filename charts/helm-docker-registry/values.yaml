@@ -1,18 +1,63 @@
+## @section Common parameters
+## @descriptionStart This section contains parameters common to most of the Helm Charts
+## @descriptionEnd
+
+## Number of replicas to run
+## @param replicas Number of replicas to run
+##
 replicas: 1
 
+## Container name
+## @param containerName Container name
+##
 containerName: registry
+
+## @section Image parameters
+## @descriptionStart This section contains image parameters and
+## the image repository and tag
+## @descriptionEnd
+
+## Image Name
+## @param imageName Image name
+##
 imageName: registry
+
+## Image Tag
+## @param imageTag Image tag
+##
 imageTag: 2
+
+## Image Pull Policy
+## @param imagePullPolicy Image pull policy
+##
 imagePullPolicy: Always
 
+## @section Volumes parameters
+## @descriptionStart This section contains volumes parameters
+## @descriptionEnd
+
+## Volume name
+## @param volumes[0].name Volume name
+## @param volumes[0].emptyDir Volume emptyDir
 volumes:
   - name: registry-storage
     emptyDir: {}
 
+## Volume mount path
+## @param volumeMounts[0].name Volume mount name
+## @param volumeMounts[0].mountPath Volume mount path
 volumeMounts:
   - name: registry-storage
     mountPath: /var/lib/registry
 
+## @section Service parameters
+## @descriptionStart This section contains service parameters
+## @descriptionEnd
+
+## Service
+## @param service.port Service base port
+## @param service.targetPort Service target port
+## @param service.host Service host
 service:
   port: 5000
   targetPort: 5000

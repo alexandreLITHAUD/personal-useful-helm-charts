@@ -13,3 +13,40 @@ This Helm chart automates the deployment of a Simple Flask App with Elastic APM 
 3. Install the chart: 
    ```bash
    helm install my-flask-app ./helm-flask-elastic-apm
+
+## Parameters
+
+### Common parameters
+
+This section contains parameters common to most of the Helm Charts
+
+| Name       | Description               | Value |
+| ---------- | ------------------------- | ----- |
+| `replicas` | Number of replicas to run | `1`   |
+
+### Image parameters
+
+This section contains image parameters and
+the image repository and tag
+
+| Name               | Description      | Value                        |
+| ------------------ | ---------------- | ---------------------------- |
+| `image.repository` | Image repository | `alexandrelithaud/flask-apm` |
+| `image.tag`        | Image tag        | `final`                      |
+
+### Network parameters
+
+This section contains network parameters
+
+| Name           | Description  | Value  |
+| -------------- | ------------ | ------ |
+| `network.port` | Network port | `5000` |
+
+### APM parameters
+
+This section contains APM parameters
+
+| Name               | Description  | Value                                        |
+| ------------------ | ------------ | -------------------------------------------- |
+| `apm.service-name` | Service name | `flask-apm-service`                          |
+| `apm.server-url`   | Server URL   | `http://apm-service.elk-monitoring.svc:8200` |

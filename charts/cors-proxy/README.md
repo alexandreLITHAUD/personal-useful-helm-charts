@@ -16,5 +16,33 @@ This Helm chart deploys a CORS (Cross-Origin Resource Sharing) proxy to allow co
     ```
 4. Customize the values in the `values.yaml` file as needed.
 
-## Configuration:
-- Modify the `values.yaml` to configure allowed origins, headers, and methods.
+## Parameters
+
+### Common parameters
+
+This section contains parameters common to most of the Helm Charts
+
+| Name           | Description               | Value                       |
+| -------------- | ------------------------- | --------------------------- |
+| `replicaCount` | Number of replicas to run | `1`                         |
+| `targetURL`    | Target URL                | `http://qama-backend:65454` |
+
+### Image parameters
+
+This section contains image parameters and
+the image repository and tag
+
+| Name               | Description       | Value          |
+| ------------------ | ----------------- | -------------- |
+| `image.tag`        | Image tag         | `stable`       |
+| `image.repository` | Image repository  | `nginx`        |
+| `image.pullPolicy` | Image pull policy | `IfNotPresent` |
+
+### Service parameters
+
+This section contains service parameters
+
+| Name           | Description  | Value       |
+| -------------- | ------------ | ----------- |
+| `service.type` | Service type | `ClusterIP` |
+| `service.port` | Service port | `80`        |

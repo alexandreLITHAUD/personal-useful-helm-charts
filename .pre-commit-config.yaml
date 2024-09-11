@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/bitnami/readme-generator-for-helm
+    rev: "main"
+    hooks:
+      - id: helm-readme-generator
+        # in order to run helm-readme-generator only once
+        name: cors-proxy
+        pass_filenames: false
+        always_run: true
+        # default args are [--readme=chart/README.md, --values=chart/values.yaml]
+        args: [--readme=charts/cors-proxy/README.md, --values=charts/cors-proxy/values.yaml]
+
+      - id: helm-readme-generator
+        # in order to run helm-readme-generator only once
+        name: docker-registry
+        pass_filenames: false
+        always_run: true
+        # default args are [--readme=chart/README.md, --values=chart/values.yaml]
+        args: [--readme=charts/helm-docker-registry/README.md, --values=charts/helm-docker-registry/values.yaml]
+
+      - id: helm-readme-generator
+        # in order to run helm-readme-generator only once
+        name: flask-elastic-apm
+        pass_filenames: false
+        always_run: true
+        # default args are [--readme=chart/README.md, --values=chart/values.yaml]
+        args: [--readme=charts/helm-flask-elastic-apm/README.md, --values=charts/helm-flask-elastic-apm/values.yaml]

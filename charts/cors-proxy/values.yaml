@@ -1,10 +1,39 @@
-# cors-proxy/values.yaml
+## @section Common parameters
+## @descriptionStart This section contains parameters common to most of the Helm Charts
+## @descriptionEnd
+
+## Number of replicas to run
+## @param replicaCount Number of replicas to run
+##
 replicaCount: 1
+
+## Url of the target service
+## @param targetURL Target URL
+##
+targetURL: http://qama-backend:65454
+
+## @section Image parameters
+## @descriptionStart This section contains image parameters and
+## the image repository and tag
+## @descriptionEnd
+
+## Nginx image version
+## @param image.tag Image tag
+## @param image.repository Image repository
+## @param image.pullPolicy Image pull policy
 image:
   repository: nginx
   tag: stable
   pullPolicy: IfNotPresent
+
+
+## @section Service parameters
+## @descriptionStart This section contains service parameters
+## @descriptionEnd
+
+## Service type
+## @param service.type Service type
+## @param service.port Service port
 service:
   type: ClusterIP
   port: 80
-targetURL: http://qama-backend:65454  # Adjust this to your backend service name and port
