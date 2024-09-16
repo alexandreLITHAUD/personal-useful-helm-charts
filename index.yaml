@@ -107,4 +107,14 @@ entries:
     urls:
     - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/helm-flask-elastic-apm-0.1.0/helm-flask-elastic-apm-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-11T13:33:04.629306645Z"
+  k8s-raw-configuration:
+  - apiVersion: v2
+    created: "2024-09-16T09:14:26.46153691Z"
+    description: A Helm chart for creating a k8s raw configuration as a Helm chart
+    digest: fd7996fe35708a923c7eec5e9759fa73863b72940a3696e67391c02fb4ffbb3a
+    name: k8s-raw-configuration
+    type: application
+    urls:
+    - https://github.com/alexandreLITHAUD/personal-useful-helm-charts/releases/download/k8s-raw-configuration-0.1.0/k8s-raw-configuration-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-09-16T09:14:26.461644421Z"
