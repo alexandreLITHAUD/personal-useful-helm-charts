@@ -7,7 +7,7 @@
 ## @descriptionEnd
 
 ## The K8S raw Configuration as a Helm chart template
-## @param templates[] Templates 
+## @param templates Templates 
 templates:
   - |
     ""

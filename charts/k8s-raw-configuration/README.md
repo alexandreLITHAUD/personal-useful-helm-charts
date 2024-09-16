@@ -16,3 +16,16 @@ This Helm chart enables to write raw k8s configuration as helm charts.
    helm install raw-conf ./k8s-raw-configuration
 
 ## Parameters
+
+### Common parameters
+
+This section contains parameters common to most of the Helm Charts
+
+
+### Templates parameters
+
+This section contains templates parameters
+
+| Name        | Description | Value        |
+| ----------- | ----------- | ------------ |
+| `templates` | Templates   | `["\"\"\n"]` |
