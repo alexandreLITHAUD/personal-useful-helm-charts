@@ -1,0 +1,13 @@
+## @section Common parameters
+## @descriptionStart This section contains parameters common to most of the Helm Charts
+## @descriptionEnd
+
+## @section Templates parameters
+## @descriptionStart This section contains templates parameters
+## @descriptionEnd
+
+## The K8S raw Configuration as a Helm chart template
+## @param templates[] Templates 
+templates:
+  - |
+    ""
